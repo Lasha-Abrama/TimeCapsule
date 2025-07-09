@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  /* the element starts completely invisible, starts 20 pixels lower than its normal position.*/
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* ends fully visible, in its normal position (no shift) */
+}
+:root {
+  --main-bg: #fdfaf6;
+  --main-text: #1f1f1f;
+  --accent: #1e6091;
+  --hover-1: #ff6b6b;
+  --hover-2: #495057;
+  --card-bg: #ffffff;
+  --border: #ddd;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  /* because of sticky, to have a header a priority. */
+}
+
+header.sticky {
+  background-color: var(--card-bg);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--main-text);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--hover-1);
+}
+
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.btn:hover {
+  background: var(--hover-1);
+}
+.btn.secondary,
+.event-card a.btn.secondary {
+  background: #6c757d;
+}
+.btn.secondary:hover,
+.event-card a.btn.secondary:hover {
+  background: var(--hover-2);
+}
+
+/* Styles that may be used across pages or by JavaScript */
+@media (max-width: 420px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}

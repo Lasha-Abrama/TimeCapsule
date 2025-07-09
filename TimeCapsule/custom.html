@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TimeCapsule – Pick a Date</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">🕰️ TimeCapsule</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./today.html">Today</a></li>
+          <li><a href="./custom.html">Custom Date</a></li>
+          <li><a href="./favorites.html">Favorites</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+        <div class="burger">&#9776;</div>
+      </nav>
+    </header>
+
+    <main class="custom">
+      <section class="today-section">
+        <h2>Pick a Date in History</h2>
+        <form id="customForm">
+          <div class="form-row">
+            <label for="month">Month:</label>
+            <input
+              type="number"
+              id="month"
+              name="month"
+              min="1"
+              max="12"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label for="day">Day:</label>
+            <input
+              type="number"
+              id="day"
+              name="day"
+              min="1"
+              max="31"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Show Events</button>
+        </form>
+
+        <div id="customEvents" class="event-list"></div>
+        <button id="load-more-btn" class="btn" style="display: none">Load More</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 TimeCapsule. Created By Lasha Abramishvili.</p>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeCapsule – A Day in History</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">🕰️ TimeCapsule</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./today.html">Today</a></li>
+          <li><a href="./custom.html">Custom Date</a></li>
+          <li><a href="./favorites.html">Favorites</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+        <div class="burger">&#9776;</div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h1>Time Travel Through History</h1>
+        <p>Discover historical events from today or any day you choose.</p>
+        <div class="hero-buttons">
+          <a href="./today.html" class="btn">See Today's Events</a>
+          <a href="./custom.html" class="btn secondary">Choose a Date</a>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="how-it-works">
+        <h2>How TimeCapsule Works</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>📅 Choose a Date</h3>
+            <p>Pick today or any other day to reveal events from history.</p>
+          </div>
+          <div class="step">
+            <h3>📜 See Events</h3>
+            <p>We show you important world events, filtered by date.</p>
+          </div>
+          <div class="step">
+            <h3>⭐ Save Favorites</h3>
+            <p>Click to save the ones you like and view them later.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Timeline -->
+      <section class="timeline-preview">
+        <h2>Random Highlights From The Past</h2>
+        <div class="timeline-grid" id="highlightContainer">
+          <!-- Random events will be injected by JS -->
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2>Start Exploring History Now</h2>
+        <a href="./today.html" class="btn">See What Happened Today</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 TimeCapsule. Created By Lasha Abramishvili.</p>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/events.js"></script>
+  </body>
+</html>
