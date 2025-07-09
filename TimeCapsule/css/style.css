@@ -60,7 +60,10 @@
 
 .timeline-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Creates 4 equal-width columns in the grid */
   gap: 1.5rem;
   justify-content: center;
 }
@@ -104,7 +107,7 @@ main.about {
   padding: 1rem 2rem 2rem 2rem;
   background: #fafafa;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  min-height: 70vh;
+  min-height: 70vh; /* Ensures the element is at least 70% of the viewport height */
   display: flex;
   flex-direction: column;
 }
@@ -129,6 +132,7 @@ main h2::after {
 .event-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
+  /* Creates as many columns as will fit, each at least 332px wide, but can grow to fill available space */
   gap: 1.5rem;
   justify-content: center;
   padding: 0 1rem;
@@ -148,10 +152,13 @@ main h2::after {
   height: 265px;
   width: 332px;
   align-items: flex-start;
+  /* Aligns items to the top (start) of the cross axis in a flex container */
 }
 
 .event-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(
+    -7px
+  ); /* Moves the element 7px upward from its original position */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -163,11 +170,13 @@ main h2::after {
 
 .event-card p {
   flex-grow: 1;
+  /* Allows the element to grow and take up remaining space in the flex container */
   color: #555;
   font-size: 1rem;
   margin-bottom: 2rem;
   max-height: 6.5rem;
   overflow-y: auto;
+  /* Adds a vertical scrollbar only when the content overflows vertically */
   padding-right: 6px;
 }
 
@@ -261,6 +270,7 @@ main h2::after {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Creates as many columns as fit in the container, each at least 280px wide and able to grow to fill space */
   margin-bottom: 4rem;
 }
 
@@ -294,6 +304,7 @@ main h2::after {
 }
 .center {
   margin-inline: auto;
+  /* Prevents the button from stretching to full container width by auto-adjusting horizontal margins */
 }
 .contact-list a {
   color: var(--accent);
@@ -305,7 +316,6 @@ main h2::after {
   color: var(--hover-1);
 }
 
-/* Mobile Version*/
 @media (max-width: 420px) {
   main.favorites,
   main.custom,
@@ -320,14 +330,12 @@ main h2::after {
   .timeline-grid {
     grid-template-columns: none;
   }
-
   #customForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
   }
-
   #customForm button {
     margin-top: 0.5rem;
   }
