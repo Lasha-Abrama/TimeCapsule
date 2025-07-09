@@ -303,8 +303,7 @@ main h2::after {
   color: #1f1f1f;
 }
 .center {
-  margin-inline: auto;
-  /* Prevents the button from stretching to full container width by auto-adjusting horizontal margins */
+  margin: auto;
 }
 .contact-list a {
   color: var(--accent);
