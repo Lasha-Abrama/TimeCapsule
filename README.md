@@ -4,7 +4,7 @@ A web app that brings history to life — discover major events that happened to
 
 ## 🌐 Figma Design
 
-[🔗 LINK](https://your-live-site-url.com](https://www.figma.com/design/n5T1Q9Y2qJ33JXN5bduNSh/TimeCapsule?node-id=0-1&t=dcCTD2BSmvdkim2R-1))
+[View the Figma Design](https://www.figma.com/design/n5T1Q9Y2qJ33JXN5bduNSh/TimeCapsule?node-id=0-1&t=dcCTD2BSmvdkim2R-1)
 
 ---
 
