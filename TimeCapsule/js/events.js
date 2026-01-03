@@ -90,7 +90,10 @@ const formatDatePart = (num) => (num < 10 ? `0${num}` : num);
     nextEvents.forEach((event) => {
       const year = event.year || "Unknown Year";
       const description = event.text || "No description available";
-      const wikiUrl = event.pages[0].content_urls.desktop.page || null;
+      const page = event.pages?.[0];
+      const wikiUrl = page
+        ? `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title)}`
+        : null;
 
       const article = document.createElement("article");
       article.className = "event-card";
